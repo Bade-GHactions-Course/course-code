@@ -17,7 +17,7 @@ jobs:
         run: sw_vers
   
   #win (dependent job) - depends on completion status of lnx-job
-  job-run-mac-cmds:
+  job-run-win-cmds:
     runs-on: windows-latest
     needs: [job-run-lnx-cmds]
     steps:
