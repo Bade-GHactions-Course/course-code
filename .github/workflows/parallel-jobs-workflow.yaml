@@ -1,0 +1,25 @@
+name: Parallel Jobs Workflow
+on: [push]
+
+jobs:
+  #lnx job
+  job-run-lnx-cmds:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello World"
+  
+  #mac (parallel job) - not dependent on any job
+  job-run-mac-cmds:
+    runs-on: macos-latest
+    steps:
+      - name: View SW Version
+        run: sw_vers
+  
+  #win (dependent job) - depends on completion status of lnx-job
+  job-run-mac-cmds:
+    runs-on: windows-latest
+    needs: [job-run-lnx-cmds]
+    steps:
+      - name: echo a string
+        run: Write-Output "Windows String"
