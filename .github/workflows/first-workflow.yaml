@@ -1,0 +1,19 @@
+name: First Workflow
+on: [push]
+
+jobs:
+  #jobid
+  run-shell-cmds:
+    runs-on: ubuntu-latest
+    steps:
+      #group of steps
+      - name: Echo a string
+        run: echo "hello world"
+
+      - name: Print host details
+        run: lsb_release -a
+
+      - name: Run multiple commands
+        run: |
+          hostname
+          python3 --version
