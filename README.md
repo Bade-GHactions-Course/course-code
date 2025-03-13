@@ -1,1 +1,1 @@
-# course-code
+To know about Github Hosted Runners [Linux, Windows, Mac] configuration & pre-installed softwares details - https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners
